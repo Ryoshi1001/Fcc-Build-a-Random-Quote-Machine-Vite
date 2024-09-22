@@ -6,7 +6,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 //evn key
 const apiKey = import.meta.env.VITE_API_KEY; 
 
-const WebPage = () => {
+const QuotesPage = () => {
   //state for quote, author, and colors for background/btns/icons
   const [author, setAuthor] = useState('')
   const [quote, setQuote] = useState('')
@@ -118,4 +118,4 @@ const WebPage = () => {
   );
 };
 
-export default WebPage;
+export default QuotesPage;

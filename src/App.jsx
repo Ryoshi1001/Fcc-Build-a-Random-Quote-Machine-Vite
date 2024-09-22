@@ -1,12 +1,13 @@
 
 import './App.css'
-import WebPage from './webpage'
+import QuotesPage from './QuotesPage'
+
 
 function App() {
 
   return (
     <div>
-        <WebPage/>
+        <QuotesPage/>
     </div>
   )
 }
