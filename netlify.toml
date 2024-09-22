@@ -1,7 +1,6 @@
-[build]
-  base = "quoteapi"
+[build] 
   command = "npm run build"
-  publish = "quoteapi/dist"
+  publish = "dist"
 
 [[redirects]]
   from = "/*"
