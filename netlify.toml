@@ -1,6 +1,7 @@
 [build]
-  command = "npm run netlify-build"
-  publish = "dist"
+  base = "quoteapi
+  command = "npm run build"
+  publish = "quoteapi/dist"
 
 [[redirects]]
   from = "/*"
