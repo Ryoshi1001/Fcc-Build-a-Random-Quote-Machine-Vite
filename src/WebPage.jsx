@@ -3,7 +3,8 @@ import { BsTwitter } from 'react-icons/bs';
 import { TiSocialTumbler } from 'react-icons/ti';
 import { FaQuoteLeft } from "react-icons/fa";
 
-const apiKey = '5d78f0e5admsh55791b82831e014p1be381jsn6689e43ae4bc'; 
+//evn key
+const apiKey = import.meta.env.VITE_API_KEY; 
 
 const WebPage = () => {
   //state for quote, author, and colors for background/btns/icons
