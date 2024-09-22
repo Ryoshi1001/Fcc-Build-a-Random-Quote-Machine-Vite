@@ -3,9 +3,8 @@ import { BsTwitter } from 'react-icons/bs';
 import { TiSocialTumbler } from 'react-icons/ti';
 import { FaQuoteLeft } from "react-icons/fa";
 
-//evn key
-// const apiKey = import.meta.env.VITE_API_KEY; 
-
+//env key
+const apiKey = import.meta.env.VITE_API_KEY; 
 
 const QuotesPage = () => {
   //state for quote, author, and colors for background/btns/icons
@@ -26,7 +25,7 @@ const QuotesPage = () => {
         {
           method: 'GET',
           headers: {
-            'x-rapidapi-key': '5d78f0e5admsh55791b82831e014p1be381jsn6689e43ae4bc',
+            'x-rapidapi-key': apiKey,
             'x-rapidapi-host': 'quotes15.p.rapidapi.com'
           }
         }
