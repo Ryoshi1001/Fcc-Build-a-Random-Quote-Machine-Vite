@@ -6,6 +6,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 //evn key
 const apiKey = import.meta.env.VITE_API_KEY; 
 
+
 const QuotesPage = () => {
   //state for quote, author, and colors for background/btns/icons
   const [author, setAuthor] = useState('')
@@ -27,6 +28,7 @@ const QuotesPage = () => {
           headers: {
             'x-rapidapi-key': apiKey,
             'x-rapidapi-host': 'quotes15.p.rapidapi.com',
+            'Content-Type': 'application/json'
           },
         }
       );
@@ -37,7 +39,7 @@ const QuotesPage = () => {
       }
       setQuote(data.content)
       setAuthor(data.originator.name)
-      return data; 
+     
     } catch (error) {
       console.log(error.message)
       throw error;
