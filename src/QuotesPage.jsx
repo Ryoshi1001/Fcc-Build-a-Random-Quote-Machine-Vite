@@ -22,9 +22,13 @@ const QuotesPage = () => {
   const fetchRandomQuoteApi = async () => {
     try {
       const res = await fetch(
-        'https://official-joke-api.appspot.com/random_joke',
+        'https://quotes15.p.rapidapi.com/quotes/random/?language_code=en',
         {
           method: 'GET',
+          headers: {
+            'x-rapidapi-key': '5d78f0e5admsh55791b82831e014p1be381jsn6689e43ae4bc',
+            'x-rapidapi-host': 'quotes15.p.rapidapi.com'
+          }
         }
       );
       const data = await res.json();
@@ -34,8 +38,8 @@ const QuotesPage = () => {
       }
 
       console.log(data)
-      setQuote(data.setup)
-      setAuthor(data.punchline)
+      setQuote(data.content)
+      setAuthor(data.originator.name)
      
     } catch (error) {
       console.log(error.message)
