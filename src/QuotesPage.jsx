@@ -4,7 +4,7 @@ import { TiSocialTumbler } from 'react-icons/ti';
 import { FaQuoteLeft } from "react-icons/fa";
 
 //evn key
-const apiKey = import.meta.env.VITE_API_KEY; 
+// const apiKey = import.meta.env.VITE_API_KEY; 
 
 
 const QuotesPage = () => {
@@ -22,14 +22,9 @@ const QuotesPage = () => {
   const fetchRandomQuoteApi = async () => {
     try {
       const res = await fetch(
-        'https://quotes15.p.rapidapi.com/quotes/random/?language_code=en',
+        'https://official-joke-api.appspot.com/random_joke',
         {
           method: 'GET',
-          headers: {
-            'x-rapidapi-key': apiKey,
-            'x-rapidapi-host': 'quotes15.p.rapidapi.com',
-            'Content-Type': 'application/json'
-          },
         }
       );
       const data = await res.json();
@@ -37,8 +32,10 @@ const QuotesPage = () => {
         console.log(data.error || "Problem with fetching data try again later if can.")
         throw new Error(data.error)
       }
-      setQuote(data.content)
-      setAuthor(data.originator.name)
+
+      console.log(data)
+      setQuote(data.setup)
+      setAuthor(data.punchline)
      
     } catch (error) {
       console.log(error.message)
