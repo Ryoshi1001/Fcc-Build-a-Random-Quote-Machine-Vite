@@ -1,5 +1,5 @@
 [build]
-  base = "quoteapi
+  base = "quoteapi"
   command = "npm run build"
   publish = "quoteapi/dist"
 
